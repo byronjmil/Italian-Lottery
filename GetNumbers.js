@@ -1,4 +1,5 @@
 const globalArr = [
+    "706",
     "917",
     "925",
     "731",
@@ -458,8 +459,12 @@ const globalArr = [
     "188",
     "119",
     "185",
-    "706"
+    "706",
 ];
+
+globalArr.length = 460;
+
+console.log(`Last in globalArr: ${globalArr[globalArr.length - 1]}`);
 
 const mySet = new Set();
 
@@ -475,9 +480,19 @@ while (mySet.size !== 10) {
     }
 }
 
-console.log(globalArr.length);
+// console.log(globalArr.length);
 
-console.log(mySet.size);
+// console.log(mySet.size);
 
 console.log('----------------------');
-console.log(mySet);
+
+// Convert Set to Array
+const myArray = Array.from(mySet);
+
+// Sort the Array (ascending order)
+myArray.sort((a, b) => a - b);
+
+// Optionally, convert back to Set
+const sortedSet = new Set(myArray);
+
+console.log(sortedSet);
