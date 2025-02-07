@@ -20,7 +20,24 @@ const scrapeNumbers = () => {
             drawing = "";
         }
     }
+};
 
-    console.log(drawings);
+const clickNextArrow = () => {
+    const element = document.getElementById('pagination-next-arrow');
+    if (element) {
+        element.click();
+    } else {
+        console.error('Element with ID "pagination-next-arrow" not found.');
+    }
+};
 
-}
+const delay = ms => new Promise(res => setTimeout(res, ms));
+
+const Scraper = async () => {
+    for (let i = 0; i < 650; i += 1) {
+        scrapeNumbers();
+        await delay(500);
+        clickNextArrow();
+        await delay(500);
+    }
+};
