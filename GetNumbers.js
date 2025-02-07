@@ -6560,3 +6560,33 @@ function findMissingNumbers(arr) {
 }
 
 console.log(findMissingNumbers(globalArr));
+
+function findMostRecurringNumbers(arr) {
+    // Step 1: Create a frequency map
+    const frequencyMap = {};
+
+    // Count occurrences of each number
+    for (let num of arr) {
+        frequencyMap[num] = (frequencyMap[num] || 0) + 1;
+    }
+
+    // Step 2: Find the maximum frequency
+    let maxFrequency = 0;
+    for (let count of Object.values(frequencyMap)) {
+        if (count > maxFrequency) {
+            maxFrequency = count;
+        }
+    }
+
+    // Step 3: Find all numbers with the maximum frequency
+    const mostRecurringNumbers = [];
+    for (let num in frequencyMap) {
+        if (frequencyMap[num] === maxFrequency) {
+            mostRecurringNumbers.push(num);
+        }
+    }
+
+    return mostRecurringNumbers;
+}
+
+console.log(findMostRecurringNumbers(globalArr));
