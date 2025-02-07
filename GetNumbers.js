@@ -6499,8 +6499,9 @@ const globalArr = [
     "590",
     "271",
     "268"
-  ]
+]
 
+/*
 // globalArr.length = 460;
 
 console.log(`Last in globalArr: ${globalArr[globalArr.length - 1]}`);
@@ -6535,3 +6536,27 @@ myArray.sort((a, b) => a - b);
 const sortedSet = new Set(myArray);
 
 console.log(sortedSet);
+*/
+
+function findMissingNumbers(arr) {
+    // Create a set of all possible numbers from "000" to "999"
+    let allNumbers = new Set();
+    for (let i = 0; i <= 999; i++) {
+        allNumbers.add(i.toString().padStart(3, '0'));
+    }
+
+    // Convert the input array to a set for faster lookup
+    let inputSet = new Set(arr);
+
+    // Find missing numbers by checking which numbers are not in the input array
+    let missingNumbers = [];
+    for (let num of allNumbers) {
+        if (!inputSet.has(num)) {
+            missingNumbers.push(num);
+        }
+    }
+
+    return missingNumbers;
+}
+
+console.log(findMissingNumbers(globalArr));
