@@ -115,6 +115,8 @@ const picks = [
 // console.log(uniquePicks.size);
 
 const drawings = [
+    "544",
+    "347",
     "917",
     "731",
     "729",
