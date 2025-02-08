@@ -6499,7 +6499,7 @@ const globalArr = [
     "590",
     "271",
     "268"
-]
+];
 
 /*
 // globalArr.length = 460;
@@ -6582,11 +6582,30 @@ function findMostRecurringNumbers(arr) {
     const mostRecurringNumbers = [];
     for (let num in frequencyMap) {
         if (frequencyMap[num] === maxFrequency) {
-            mostRecurringNumbers.push(num);
+            mostRecurringNumbers.push({ number: num, count: frequencyMap[num] });
         }
     }
 
     return mostRecurringNumbers;
 }
 
+
 console.log(findMostRecurringNumbers(globalArr));
+
+// function countOccurrences(arr) {
+//     const counts = new Map();
+
+//     arr.forEach(item => {
+//         counts.set(item, (counts.get(item) || 0) + 1);
+//     });
+
+//     // Convert the Map to an array and sort it by count in descending order
+//     const sortedCounts = [...counts.entries()].sort((a, b) => b[1] - a[1]);
+
+//     // Display the sorted results
+//     sortedCounts.forEach(([value, count]) => {
+//         console.log(`${value}: ${count}`);
+//     });
+// }
+
+// countOccurrences(globalArr);
