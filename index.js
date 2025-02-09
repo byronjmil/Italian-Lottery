@@ -169,6 +169,4 @@ for (let i = 0; i < drawings.length; i += 1) {
 }
 
 console.log(`Number of drawings: ${drawings.length / 2}`);
-if (winner === true) {
-    console.log(`Winner: ${winner} ${numberOfWins} time(s)`);
-}
+console.log(`Winner: ${winner} ${numberOfWins} time(s)`);
