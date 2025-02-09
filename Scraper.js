@@ -34,10 +34,10 @@ const clickNextArrow = () => {
 const delay = ms => new Promise(res => setTimeout(res, ms));
 
 const Scraper = async () => {
-    for (let i = 0; i < 650; i += 1) {
+    for (let i = 0; i < 711; i += 1) {
         scrapeNumbers();
-        await delay(500);
+        await delay(1000);
         clickNextArrow();
-        await delay(500);
+        await delay(1000);
     }
 };
