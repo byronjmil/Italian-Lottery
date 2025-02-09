@@ -115,31 +115,60 @@ const picks = [
 // console.log(uniquePicks.size);
 
 const drawings = [
+    "441",
     "516",
+    "303",
     "544",
+    "106",
     "347",
+    "706",
     "917",
+    "925",
     "731",
+    "042",
     "729",
+    "772",
     "829",
+    "812",
     "568",
+    "573",
     "439",
+    "511",
     "021",
+    "564",
     "512",
+    "106",
     "835",
+    "006",
     "977",
+    "003",
+    "110",
+    "867",
+    "057",
+    "351",
+    "862",
+    "577",
+    "499",
+    "443",
+    "187",
+    "051",
+    "150",
+    "824",
+    "383"
 ];
 
 let winner = false;
+let numberOfWins = 0;
 
-drawings.forEach(draw => {
-    if (picks.includes(draw)) {
-        console.log(`Winner! ${draw}`);
+for (let i = 0; i < drawings.length; i += 1) {
+    if ((i % 2 === 1) && (picks.includes(drawings[i]))) {
+        console.log(`Winner! ${drawings[i]}`);
         winner = true;
+        numberOfWins += 1;
     }
-});
+}
 
-console.log(`Number of drawings: ${drawings.length}`);
-if (winner === false) {
-    console.log(`Winner: ${winner}`);
+console.log(`Number of drawings: ${drawings.length / 2}`);
+if (winner === true) {
+    console.log(`Winner: ${winner} ${numberOfWins} time(s)`);
 }
