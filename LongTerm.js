@@ -7220,3 +7220,13 @@ console.log(findMostRecurringNumbers(globalArr));
 // }
 
 // countOccurrences(globalArr);
+
+const numbersToDraw = 46;
+
+while (findMissingNumbers(globalArr).length < numbersToDraw) {
+    globalArr.length = globalArr.length - 1;
+}
+
+console.log(`To get ${numbersToDraw} number(s), the amount of previous drawings were ${globalArr.length}`);
+console.log(findMissingNumbers(globalArr).length);
+console.log(findMissingNumbers(globalArr));
