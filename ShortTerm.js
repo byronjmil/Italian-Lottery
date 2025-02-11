@@ -115,6 +115,10 @@ const picks = [
 // console.log(uniquePicks.size);
 
 const drawings = [
+    "769",
+    "159",
+    "290",
+    "104",
     "441",
     "516",
     "303",
@@ -156,6 +160,8 @@ const drawings = [
     "824",
     "383"
 ];
+
+drawings.length = 40;
 
 let winner = false;
 let numberOfWins = 0;
