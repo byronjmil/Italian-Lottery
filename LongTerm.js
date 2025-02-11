@@ -7489,7 +7489,9 @@ const globalArr = [
     "980",
     "329",
     "016",
-  ];
+];
+
+console.log(globalArr.length)
 
 /*
 // globalArr.length = 460;
