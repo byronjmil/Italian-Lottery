@@ -115,6 +115,9 @@ const picks = [
 // console.log(uniquePicks.size);
 
 const drawings = [
+    "891",
+    "118",
+    "525",
     "769",
     "159",
     "290",
@@ -152,22 +155,17 @@ const drawings = [
     "351",
     "862",
     "577",
-    "499",
-    "443",
-    "187",
-    "051",
-    "150",
-    "824",
-    "383"
 ];
 
-drawings.length = 40;
+if(drawings.length > 40){
+    drawings.length = 40;
+}
 
 let winner = false;
 let numberOfWins = 0;
 
 for (let i = 0; i < drawings.length; i += 1) {
-    if ((i % 2 === 1) && (picks.includes(drawings[i]))) {
+    if ((i % 2 === 0) && (picks.includes(drawings[i]))) {
         console.log(`Winner! ${drawings[i]}`);
         winner = true;
         numberOfWins += 1;
