@@ -1,4 +1,14 @@
 const globalArr = [
+    "226",
+    "479",
+    "344",
+    "830",
+    "747",
+    "683",
+    "891",
+    "118",
+    "525",
+    "769",
     "159",
     "290",
     "104",
@@ -7490,6 +7500,8 @@ const globalArr = [
     "329",
     "016",
 ];
+
+globalArr.length = 7486;
 
 console.log(globalArr.length)
 

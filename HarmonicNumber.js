@@ -9,11 +9,3 @@ for (let i = 1; i <= numberOfCoupons; i += 1) {
 console.log(
     `The expected number of drawings to get all ${numberOfCoupons} coupons is ${Math.ceil(numberOfCoupons * harmonic)}`
 );
-
-/** Estimation for large numbers */
-
-const harmonicEstimation = Math.log(numberOfCoupons) + 0.577;
-
-console.log(
-    `The expected number of drawings to get all ${numberOfCoupons} coupons is ${Math.ceil(numberOfCoupons * harmonicEstimation)}`
-);
