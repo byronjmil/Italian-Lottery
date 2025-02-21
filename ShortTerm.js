@@ -110,55 +110,10 @@ const picks = [
     "448",
 ];
 
-// const uniquePicks = new Set(picks);
+const drawings = require('./PastDrawings').globalArr;
 
-// console.log(uniquePicks.size);
-
-const drawings = [
-    "891",
-    "118",
-    "525",
-    "769",
-    "159",
-    "290",
-    "104",
-    "441",
-    "516",
-    "303",
-    "544",
-    "106",
-    "347",
-    "706",
-    "917",
-    "925",
-    "731",
-    "042",
-    "729",
-    "772",
-    "829",
-    "812",
-    "568",
-    "573",
-    "439",
-    "511",
-    "021",
-    "564",
-    "512",
-    "106",
-    "835",
-    "006",
-    "977",
-    "003",
-    "110",
-    "867",
-    "057",
-    "351",
-    "862",
-    "577",
-];
-
-if(drawings.length > 40){
-    drawings.length = 40;
+if (drawings.length > (2 * 23)) {
+    drawings.length = (2 * 23);
 }
 
 let winner = false;
