@@ -112,15 +112,18 @@ const picks = [
 
 const drawings = require('./PastDrawings').globalArr;
 
-if (drawings.length > (2 * 23)) {
-    drawings.length = (2 * 23);
+if (drawings.length > 23) {
+    drawings.length = 23;
 }
 
 let winner = false;
 let numberOfWins = 0;
 
 for (let i = 0; i < drawings.length; i += 1) {
-    if ((i % 2 === 0) && (picks.includes(drawings[i]))) {
+    if (
+        // (i % 2 === 0) &&
+        (picks.includes(drawings[i]))
+    ) {
         console.log(`Winner! ${drawings[i]}`);
         winner = true;
         numberOfWins += 1;
