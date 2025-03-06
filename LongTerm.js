@@ -27,6 +27,21 @@ function findMissingNumbers(arr) {
 
 console.log(findMissingNumbers(globalArr));
 
+console.log('---------------------------');
+
+let result = findMissingNumbers(globalArr);
+
+while(result.length < 12)
+{
+    globalArr.length = globalArr.length - 1;
+    result = findMissingNumbers(globalArr);
+}
+
+console.log(globalArr.length);
+console.log(result);
+
+console.log('---------------------------');
+
 function findMostRecurringNumbers(arr) {
     // Step 1: Create a frequency map
     const frequencyMap = {};
