@@ -31,7 +31,7 @@ console.log('---------------------------');
 
 let result = findMissingNumbers(globalArr);
 
-while(result.length < 12)
+while(result.length < 5)
 {
     globalArr.length = globalArr.length - 1;
     result = findMissingNumbers(globalArr);
