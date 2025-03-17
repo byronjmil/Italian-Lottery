@@ -29,18 +29,18 @@ console.log(findMissingNumbers(globalArr));
 
 console.log('---------------------------');
 
-let result = findMissingNumbers(globalArr);
+// let result = findMissingNumbers(globalArr);
 
-while(result.length < 5)
-{
-    globalArr.length = globalArr.length - 1;
-    result = findMissingNumbers(globalArr);
-}
+// while(result.length < 5)
+// {
+//     globalArr.length = globalArr.length - 1;
+//     result = findMissingNumbers(globalArr);
+// }
 
-console.log(globalArr.length);
-console.log(result);
+// console.log(globalArr.length);
+// console.log(result);
 
-console.log('---------------------------');
+// console.log('---------------------------');
 
 function findMostRecurringNumbers(arr) {
     // Step 1: Create a frequency map
