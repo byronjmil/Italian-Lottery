@@ -26,3 +26,6 @@ while (myPicks.size < 5) {
 };
 
 console.log(myPicks);
+
+// console.log(previousPicks.length);
+// console.log(previousPicks.includes('627'))
