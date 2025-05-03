@@ -10,7 +10,7 @@ function getSnapshots(arr, snapshotSize) {
 }
 
 const arr = require('./PastDrawings').globalArr;
-const snapshotSize = 100;
+const snapshotSize = 38;
 const snapshots = getSnapshots(arr, snapshotSize);
 
 let winnerCount = 0;
@@ -21,7 +21,7 @@ snapshots.forEach(snapshot => {
     snapshot.forEach(element => {
         mySet.add(element);
     });
-    if (mySet.size < 100) {
+    if (mySet.size < snapshotSize) {
         winnerCount += 1;
     }
     else {
