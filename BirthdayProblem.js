@@ -12,9 +12,11 @@ function birthdayProblem(n) {
 }
 let i = 1;
 let result = birthdayProblem(i);
+console.log(`${i} = ${result}`); // This will print the probability for 23 people
 while (result < .5) {
     i += 1;
     result = birthdayProblem(i);
+    console.log(`${i} = ${(result * 100).toFixed(2)*1}%`); // This will print the probability for 23 people
 }
 // Example usage:
-console.log(`${i} = ${result}`); // This will print the probability for 23 people
+// console.log(`${i} = ${result}`); // This will print the probability for 23 people

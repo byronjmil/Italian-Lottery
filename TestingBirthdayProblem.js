@@ -7,8 +7,8 @@ let arr = [];
 let mySet = new Set();
 
 for (let i = 0; i < previousPicks.length; i += 1) {
-    if (i > 0 && i % 38 === 0) {
-        if (mySet.size === 38) {
+    if (i > 0 && i % 37 === 0) {
+        if (mySet.size === 37) {
             loserCount += 1;
         }
         else {

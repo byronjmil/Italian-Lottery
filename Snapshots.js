@@ -10,7 +10,8 @@ function getSnapshots(arr, snapshotSize) {
 }
 
 const arr = require('./PastDrawings').globalArr;
-const snapshotSize = 38;
+const snapshotSize = 37;
+arr.length = snapshotSize;
 const snapshots = getSnapshots(arr, snapshotSize);
 
 let winnerCount = 0;
