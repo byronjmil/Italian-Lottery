@@ -1,4 +1,5 @@
 const globalArr = [
+    "803",
     "732",
     "715",
     "778",
@@ -37,8 +38,7 @@ const globalArr = [
     "265",
     "151",
     "164",
-    "266",
-    "765"
+    "266"
 ];
 
 module.exports.globalArr = globalArr;
