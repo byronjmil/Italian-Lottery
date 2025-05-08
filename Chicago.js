@@ -999,3 +999,10 @@ Object.keys(dictionary).forEach(element => {
 
 console.log(largestKey);
 console.log(largestValue);
+
+console.log(`Number of Drawings: ${arr.length}`);
+for (let i = 0; i < arr.length; i += 1) {
+    if(arr[i] === "410"){
+        console.log(i);
+    }
+}
