@@ -1002,7 +1002,30 @@ console.log(largestValue);
 
 console.log(`Number of Drawings: ${arr.length}`);
 for (let i = 0; i < arr.length; i += 1) {
-    if(arr[i] === "410"){
+    if (arr[i] === "410") {
         console.log(i);
     }
 }
+
+function findMostFrequentValues(arr) {
+    const frequencyMap = {};
+    let maxFrequency = 0;
+
+    // Count the frequency of each value in the array
+    arr.forEach(value => {
+        frequencyMap[value] = (frequencyMap[value] || 0) + 1;
+        maxFrequency = Math.max(maxFrequency, frequencyMap[value]);
+    });
+
+    // Collect all values that have the highest frequency
+    const mostFrequentValues = [];
+    for (const value in frequencyMap) {
+        if (frequencyMap[value] === maxFrequency) {
+            mostFrequentValues.push(Number(value));
+        }
+    }
+
+    return mostFrequentValues;
+}
+
+console.log(findMostFrequentValues(arr));
