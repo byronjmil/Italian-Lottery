@@ -2,8 +2,7 @@ const previousPicks = require('./PastDrawings').globalArr;
 const snapshotSize = 37;
 previousPicks.length = snapshotSize;
 
-let winnerCount = 0;
-let loserCount = 0;
+let duplicateFound = true;
 
 let mySet = new Set();
 
@@ -12,15 +11,15 @@ for (let i = 0; i < previousPicks.length; i += 1) {
 }
 
 if (mySet.size === 37) {
-    loserCount += 1;
+    duplicateFound = false;
 }
 else {
-    winnerCount += 1;
+    duplicateFound = true;
 }
 
-if (winnerCount > 0) {
-    console.log(`HOLD`);
+if (duplicateFound) {
+    console.log(`DUPS FOUND... :(`);
 }
 else {
-    console.log(`GO`)
+    console.log(`NO DUPES FOUND :)`)
 }
