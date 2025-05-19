@@ -1,5 +1,5 @@
 function birthdayProblem(n) {
-    const daysInYear = 1000; // Assume there are 365 days in a year
+    const daysInYear = 100; // Assume there are 365 days in a year
     let probability = 1;
 
     for (let i = 0; i < n; i++) {
@@ -11,10 +11,12 @@ function birthdayProblem(n) {
     return 1 - probability;
 }
 
-const amountOfNumbersPlayed = require('./NumbersBeforeFirstDupe').amountBeforeFirstDupe;
-
-for (let i = 1; i <= amountOfNumbersPlayed + 1; i += 1) {
-    let result = birthdayProblem(i);
+let i = 1;
+let result = birthdayProblem(i);
+console.log(`${i} = ${(result * 100).toFixed(2) * 1}%`);
+while (result < .99) {
+    i += 1;
+    result = birthdayProblem(i);
     console.log(`${i} = ${(result * 100).toFixed(2) * 1}%`);
 }
 
