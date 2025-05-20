@@ -35,7 +35,7 @@ const delay = ms => new Promise(res => setTimeout(res, ms));
 
 // 1000×(ln(1000)+0.577) == 7484
 const Scraper = async () => {
-    for (let i = 0; i < 15; i += 1) {
+    for (let i = 0; i < 3; i += 1) {
         scrapeNumbers();
         await delay(1000);
         clickNextArrow();

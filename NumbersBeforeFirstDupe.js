@@ -32,6 +32,10 @@ while (!done) {
     }
 }
 
+console.log(`Front Pair Array Length: ${frontPairArray.length}`);
+console.log(`Back Pair Array Length: ${backPairArray.length}`);
+console.log('---------------------------');
+
 let finalArr = [];
 
 if (frontPairArray.length > backPairArray.length) {
